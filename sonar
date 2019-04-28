@@ -1,0 +1,50 @@
+after installation of sonarqube 
+
+we need to integrate with jenkins for code quality testing
+in jenkins we need to install sonarcube scanner for jenkins ---from manage plugins
+1. configure sonar to jenkins in configure system
+2. add sonar Server URL,Server authentication token and save
+3.go to global tool configuration add SonarScanner for MSBuild,, give the name and MSBUILD_SQ_SCANNER_HOME --path
+save and exit
+4.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4.Sonar properties: Jenkins/maven should know the sonar server details, db credentials etc to upload the analysis report to sonar server.
+Paste the below snippet either in maven settings.xml file OR project’s pom.xml file. Both the ways it will work. In this example, I am adding the below sonar profile to the project pom.xml file. Please replace with your publicIP address.
+<profile>
+	<id>sonar</id>
+	<activation>
+		<activeByDefault>true</activeByDefault>
+	</activation>
+	<properties>p
+		<sonar.jdbc.url>jdbc:postgresql://<publicIP>/sonar</sonar.jdbc.url>
+		<sonar.jdbc.driver>org.postgresql.Driver</sonar.jdbc.driver>
+		<sonar.jdbc.username>sonar</sonar.jdbc.username>
+		<sonar.jdbc.password>sonar</sonar.jdbc.password>
+		<!-- SERVER ON A REMOTE HOST -->
+		<sonar.host.url>http://<publicIP>:9000</sonar.host.url>
+	</properties>
+</profile>
+  
+  then build the project
+  -----------------2
+
