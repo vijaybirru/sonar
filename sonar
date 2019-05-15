@@ -1,3 +1,14 @@
+sonar pre-requesties
+
+1.java >7
+2.Hard ware 2 GB ram.1 GB free space,, so 3GB ram required
+3.Amount of disk space 
+4.Hard disk should had excelleent read write
+5.Data Base required(storing meta data of analysis)
+6.Webbrowser Chrome, firefox
+
+
+
 after installation of sonarqube 
 
 we need to integrate with jenkins for code quality testing
