@@ -7,6 +7,8 @@ sonar pre-requesties
 5.Data Base required(storing meta data of analysis)
 6.Webbrowser Chrome, firefox
 
+
+***************Analyzing with SonarQube Scanner for Maven**********
 then after installing sonarcube 
 go to maven setting.xml
 
